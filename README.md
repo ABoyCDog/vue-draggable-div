@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-03 09:06:01
- * @LastEditTime: 2020-07-07 08:39:19
+ * @LastEditTime: 2020-07-07 08:47:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-draggable\README.md
@@ -23,6 +23,9 @@ import VueDraggableDiv from 'vue-draggable-div'
     ...
 components: {VueDraggableDiv}
 ```
+
+**需要使用默认样式时，import 'vue-draggable-div/dist/vue-draggable-div.css'**
+
 
 ## 可选属性及触发事件
 
