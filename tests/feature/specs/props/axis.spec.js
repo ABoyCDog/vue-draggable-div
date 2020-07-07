@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 import syn from 'syn'
 
@@ -6,7 +6,7 @@ let wrapper
 
 describe('axis prop', function () {
   it('should provide the draggable `axis` prop to the component', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         axis: 'x'
@@ -17,7 +17,7 @@ describe('axis prop', function () {
   })
 
   it('should effectively drag the component only on the horizontal axis', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         axis: 'x',
@@ -52,7 +52,7 @@ describe('axis prop', function () {
   })
 
   it('should effectively drag the component only on the vertical axis', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         axis: 'y',

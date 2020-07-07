@@ -1,9 +1,9 @@
 {
   "name": "vue-draggable-div",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "author": "liuzq <178657263@qq.com>",
-  "main": "dist/VueDraggableResizable.common.js",
-  "unpkg": "dist/VueDraggableResizable.umd.min.js",
+  "main": "dist/vue-draggable-div.common.js",
+  "unpkg": "dist/vue-draggable-div.umd.min.js",
   "browser": {
     "./sfc": "src/vue-draggable-div.vue"
   },

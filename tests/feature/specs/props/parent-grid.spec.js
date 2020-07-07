@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 import syn from 'syn'
 
@@ -11,7 +11,7 @@ describe('`parent` and `grid` props', function (done) {
         <vue-draggable-div :x="0" :y="0" :w="300" :h="300" :parent="true" :active="true" :grid=[20,20]></vue-draggable-div>
       </div>`,
       components: {
-        VueDraggableResizable
+        vue-draggable-div
       }
     }
 
@@ -48,7 +48,7 @@ describe('`parent` and `grid` props', function (done) {
         <vue-draggable-div :x="0" :y="0" :w="300" :h="300" :parent="true" :active="true" :grid=[20,20]></vue-draggable-div>
       </div>`,
       components: {
-        VueDraggableResizable
+        vue-draggable-div
       }
     }
 
@@ -86,7 +86,7 @@ describe('`parent` and `grid` props', function (done) {
         <vue-draggable-div :parent="true" :grid=[24,24] :x="0" :y="0" :w="360" :h="360" :active="true"></vue-draggable-div>
       </div>`,
       components: {
-        VueDraggableResizable
+        vue-draggable-div
       }
     }
 
@@ -123,7 +123,7 @@ describe('`parent` and `grid` props', function (done) {
         <vue-draggable-div :parent="true" :grid=[24,24] :x="0" :y="0" :w="360" :h="360" :active="true"></vue-draggable-div>
       </div>`,
       components: {
-        VueDraggableResizable
+        vue-draggable-div
       }
     }
 
@@ -161,7 +161,7 @@ describe('`parent` and `grid` props', function (done) {
         <vue-draggable-div :parent="true" :grid=[24,24] :x="10" :y="10" :w="360" :h="360" :active="true"></vue-draggable-div>
       </div>`,
       components: {
-        VueDraggableResizable
+        vue-draggable-div
       }
     }
 
@@ -198,7 +198,7 @@ describe('`parent` and `grid` props', function (done) {
         <vue-draggable-div :parent="true" :grid=[24,24] :x="10" :y="10" :w="360" :h="360" :active="true"></vue-draggable-div>
       </div>`,
       components: {
-        VueDraggableResizable
+        vue-draggable-div
       }
     }
 

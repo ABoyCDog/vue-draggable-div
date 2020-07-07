@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 import syn from 'syn'
 
@@ -6,7 +6,7 @@ let wrapper
 
 describe('zIndex prop', function () {
   it('should set the zIndex through the `z` prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         z: 99
@@ -18,13 +18,13 @@ describe('zIndex prop', function () {
   })
 
   it('should set "auto" as defaul value for zIndex if `z` prop is not provided', function () {
-    wrapper = mount(VueDraggableResizable)
+    wrapper = mount(vue-draggable-div)
 
     expect(wrapper.vm.$el.style.zIndex).to.equal('auto')
   })
 
   it('should react to `z` prop changes', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         z: 99

@@ -1,11 +1,11 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 
 let wrapper
 
 describe('position props', function () {
   it('should set the initial position of the element using `x` and `y` props', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         x: 200,
         y: 150
@@ -19,7 +19,7 @@ describe('position props', function () {
   })
 
   it('should react to position prop changes', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         x: 200,
         y: 150

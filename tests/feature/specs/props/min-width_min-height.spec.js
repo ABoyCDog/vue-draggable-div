@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 import syn from 'syn'
 import sinon from 'sinon'
@@ -7,7 +7,7 @@ let wrapper
 
 describe('`min-height` and `min-width` props', function () {
   it('should pass `min-height` and `min-width` as props', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         minHeight: 100,
         minWidth: 200
@@ -19,7 +19,7 @@ describe('`min-height` and `min-width` props', function () {
   })
 
   it('should react to `min-height` and `min-width` prop changes', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         minHeight: 100,
@@ -34,7 +34,7 @@ describe('`min-height` and `min-width` props', function () {
   })
 
   it('should not resize the component under `min-height` and `min-width`', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         minHeight: 100,

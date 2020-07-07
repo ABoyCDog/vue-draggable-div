@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 import syn from 'syn'
 
@@ -6,7 +6,7 @@ let wrapper
 
 describe('`lock-aspect-ratio` prop', function () {
   it('should provide the `lock-aspect-ratio` as prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         lockAspectRatio: true
       }
@@ -16,7 +16,7 @@ describe('`lock-aspect-ratio` prop', function () {
   })
 
   it('should resize the component accordingly to its aspect ratio if `lock-aspect-ratio` is true', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         w: 200,
@@ -56,7 +56,7 @@ describe('`lock-aspect-ratio` prop', function () {
         <vue-draggable-div :w="300" :h="400" :parent="true" :active="true" :lock-aspect-ratio="true"></vue-draggable-div>
       </div>`,
       components: {
-        VueDraggableResizable
+        vue-draggable-div
       }
     }
 

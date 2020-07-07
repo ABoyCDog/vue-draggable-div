@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 import syn from 'syn'
 import sinon from 'sinon'
@@ -9,7 +9,7 @@ describe('`onDragStart` and `onResizeStart` props', function () {
   it('should call `onDragStart` callback when the component is clicked', function () {
     const onDragStartCallback = sinon.spy()
 
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         onDragStart: onDragStartCallback
@@ -24,7 +24,7 @@ describe('`onDragStart` and `onResizeStart` props', function () {
   it('should prevent activation of the component if the `onDragStart` callback returns false', function () {
     const onDragStartCallback = () => false
 
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         onDragStart: onDragStartCallback
@@ -40,7 +40,7 @@ describe('`onDragStart` and `onResizeStart` props', function () {
   it('should call `onResizeStart` callback when the component is resized', function (done) {
     const onResizeStartCallback = sinon.spy()
 
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         active: true,
@@ -74,7 +74,7 @@ describe('`onDragStart` and `onResizeStart` props', function () {
   it('should prevent resizing the component if the `onResizeStart` callback returns false', function (done) {
     const onResizeStartCallback = () => false
 
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         active: true,
@@ -115,7 +115,7 @@ describe('`onDrag` and `onResize` props', function () {
   it('should call `onDrag` callback when the component is dragged', function (done) {
     const onDragCallback = sinon.spy()
 
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         onDrag: onDragCallback,
@@ -154,7 +154,7 @@ describe('`onDrag` and `onResize` props', function () {
       if (y > 10) return false
     }
 
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         onDrag: onDragCallback,
@@ -192,7 +192,7 @@ describe('`onDrag` and `onResize` props', function () {
   it('should call `onResize` callback when the component is resized', function (done) {
     const onResizeCallback = sinon.spy()
 
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         onResize: onResizeCallback,
@@ -232,7 +232,7 @@ describe('`onDrag` and `onResize` props', function () {
       if (h > 110) return false
     }
 
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         active: true,

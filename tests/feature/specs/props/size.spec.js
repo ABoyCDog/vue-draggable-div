@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 import syn from 'syn'
 
@@ -6,7 +6,7 @@ let wrapper
 
 describe('size props', function () {
   it('should set the initial size of the component using `w` and `h` props', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         w: 200,
         h: 150
@@ -24,7 +24,7 @@ describe('size props', function () {
   })
 
   it('should react to size prop changes', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         w: 200,
         h: 150
@@ -38,7 +38,7 @@ describe('size props', function () {
   })
 
   it('should allow auto value for `w` and `h` props', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         w: 'auto',
         h: 'auto'
@@ -56,7 +56,7 @@ describe('size props', function () {
   })
 
   it('should fallback to numeric values for width and height when the component is resized', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         w: 'auto',
@@ -64,7 +64,7 @@ describe('size props', function () {
         active: true
       },
       slots: {
-        default: 'VueDraggableResizable'
+        default: 'vue-draggable-div'
       }
     })
 
@@ -96,7 +96,7 @@ describe('size props', function () {
   })
 
   it('should change `auto` back to numeric values for width and height', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         w: 'auto',
@@ -104,7 +104,7 @@ describe('size props', function () {
         active: true
       },
       slots: {
-        default: 'VueDraggableResizable'
+        default: 'vue-draggable-div'
       }
     })
 

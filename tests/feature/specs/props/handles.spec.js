@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 import syn from 'syn'
 
@@ -6,7 +6,7 @@ let wrapper
 
 describe('`handles` prop', function () {
   it('should render only the handles passed with `handles` props', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         handles: ['tl', 'tm', 'tr', 'bl', 'bm', 'br']
       }
@@ -17,7 +17,7 @@ describe('`handles` prop', function () {
   })
 
   it('should not render the handles if `handles` props is empty', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         handles: []
       }
@@ -27,7 +27,7 @@ describe('`handles` prop', function () {
   })
 
   it('should react to `handles` prop changes', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         handles: []

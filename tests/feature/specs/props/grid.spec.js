@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 import syn from 'syn'
 
@@ -6,7 +6,7 @@ let wrapper
 
 describe('`grid` prop', function () {
   it('should provide the `grid` as prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         grid: [20, 40]
       }
@@ -17,7 +17,7 @@ describe('`grid` prop', function () {
   })
 
   it('should react to the changes of the `grid` prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         grid: [20, 40]
       }
@@ -30,7 +30,7 @@ describe('`grid` prop', function () {
   })
 
   it('should not drag the component on the grid if the drag movement is smaller than the grid interval', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         x: 0,
@@ -65,7 +65,7 @@ describe('`grid` prop', function () {
   })
 
   it('should drag the component on the grid if the drag movement equals the grid interval', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         x: 0,
@@ -100,7 +100,7 @@ describe('`grid` prop', function () {
   })
 
   it('should not resize the component on the grid if the drag movement is smaller than the grid interval', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         x: 0,
@@ -137,7 +137,7 @@ describe('`grid` prop', function () {
   })
 
   it('should resize the component on the grid if the resize movement equals the grid interval', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         x: 0,
@@ -174,7 +174,7 @@ describe('`grid` prop', function () {
   })
 
   it('should not resize the component under lower grid values even if `minHeight` and `minWidth` props are lower', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         x: 0,

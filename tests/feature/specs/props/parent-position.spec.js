@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount, createWrapper } from '@vue/test-utils'
 
 let parent
@@ -11,7 +11,7 @@ describe('`parent` and `position` props', function () {
         <vue-draggable-div :x="0" :y="0" :w="200" :h="200" :parent="false" :active="true"></vue-draggable-div>
       </div>`,
       components: {
-        VueDraggableResizable
+        vue-draggable-div
       }
     }
 
@@ -40,7 +40,7 @@ describe('`parent` and `position` props', function () {
         <vue-draggable-div :x="0" :y="0" :w="200" :h="200" :parent="true" :active="true"></vue-draggable-div>
       </div>`,
       components: {
-        VueDraggableResizable
+        vue-draggable-div
       }
     }
 

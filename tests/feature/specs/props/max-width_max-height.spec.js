@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 import syn from 'syn'
 
@@ -6,7 +6,7 @@ let wrapper
 
 describe('`max-width` and `max-height` props', function () {
   it('should pass `max-width` and `max-height` as props', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         maxWidth: 200,
         maxHeight: 300
@@ -18,7 +18,7 @@ describe('`max-width` and `max-height` props', function () {
   })
 
   it('should react to `max-width` and `max-height` prop changes', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         maxWidth: 200,
@@ -33,7 +33,7 @@ describe('`max-width` and `max-height` props', function () {
   })
 
   it('should not resize the component over `max-width` and `max-height` props', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         maxWidth: 100,

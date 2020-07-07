@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 import syn from 'syn'
 
@@ -6,7 +6,7 @@ let wrapper
 
 describe('`active` prop', function () {
   it('should enable the component through `active` prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         active: true
       }
@@ -17,7 +17,7 @@ describe('`active` prop', function () {
   })
 
   it('should not show handles if the component is not active', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         active: false
       }
@@ -27,7 +27,7 @@ describe('`active` prop', function () {
   })
 
   it('should show handles if the component is active', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         active: true
       }
@@ -37,7 +37,7 @@ describe('`active` prop', function () {
   })
 
   it('should react to the `active` prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         active: false
       }
@@ -49,7 +49,7 @@ describe('`active` prop', function () {
   })
 
   it('should activate the component when clicking on it', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true
     })
 
@@ -64,7 +64,7 @@ describe('`active` prop', function () {
   })
 
   it('should deactivate the component when clicking outside it', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         active: true
@@ -83,7 +83,7 @@ describe('`active` prop', function () {
   })
 
   it('should not activate the component when right-clicking on it', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         active: false
@@ -104,7 +104,7 @@ describe('`active` prop', function () {
   })
 
   it('should resize the component also when it is activated using prop', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         w: 100,
@@ -139,7 +139,7 @@ describe('`active` prop', function () {
   })
 
   it('should activate the component when touching on it', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true
     })
 
@@ -165,7 +165,7 @@ describe('`active` prop', function () {
 
 describe('`prevent-deactivation` prop', function () {
   it('should not deactivate the component when clicking outside it', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         active: true,

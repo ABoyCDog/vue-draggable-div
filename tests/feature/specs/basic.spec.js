@@ -1,11 +1,11 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 
 let wrapper
 
 describe('Basic', function () {
   it('should render correctly', function () {
-    wrapper = mount(VueDraggableResizable)
+    wrapper = mount(vue-draggable-div)
 
     expect(wrapper.vm.$el).to.be.ok
     expect(wrapper.is('div')).to.be.true
@@ -13,7 +13,7 @@ describe('Basic', function () {
   })
 
   it('should render the elements in default slot', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       slots: {
         default: '<p>Resize Me</p>'
       }
@@ -24,13 +24,13 @@ describe('Basic', function () {
   })
 
   it('should render the component with 8 handles by default', function () {
-    wrapper = mount(VueDraggableResizable)
+    wrapper = mount(vue-draggable-div)
 
     expect(wrapper.findAll('div.handle').length).to.equal(8)
   })
 
   it('should provide named slots for each one of the hanldes', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       slots: {
         tl: '<span>TL</span>',
         tm: '<span>TM</span>',
@@ -54,7 +54,7 @@ describe('Basic', function () {
   })
 
   it('should not block event bubbling', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       slots: {
         default: '<input type="text" class="input" />'
       }

@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 import syn from 'syn'
 
@@ -6,7 +6,7 @@ let wrapper
 
 describe('native dragging', function () {
   it('should enable native drag by setting the `enable-native-drag` prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         enableNativeDrag: true
@@ -19,13 +19,13 @@ describe('native dragging', function () {
 
 describe('component draggable', function () {
   it('should have the `draggable` class by default', function () {
-    wrapper = mount(VueDraggableResizable)
+    wrapper = mount(vue-draggable-div)
 
     expect(wrapper.classes()).to.contain('draggable')
   })
 
   it('should not have the `draggable` class if the `draggable` prop is false', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         draggable: false
@@ -42,7 +42,7 @@ describe('component draggable', function () {
   })
 
   it('should react to `draggable` prop changes', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         draggable: false
@@ -55,7 +55,7 @@ describe('component draggable', function () {
   })
 
   it('should not be draggable if `draggable` prop is false', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         x: 0,
@@ -94,13 +94,13 @@ describe('component draggable', function () {
 
 describe('component resizable', function () {
   it('should have `resizable` class by default', function () {
-    wrapper = mount(VueDraggableResizable)
+    wrapper = mount(vue-draggable-div)
 
     expect(wrapper.classes()).to.contain('resizable')
   })
 
   it('should not have the `resizable` class if the `resizable` prop is false', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         resizable: false
@@ -117,7 +117,7 @@ describe('component resizable', function () {
   })
 
   it('should not render handles if the `resizable` prop is false', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         active: true,
@@ -129,7 +129,7 @@ describe('component resizable', function () {
   })
 
   it('should react to `resizable` prop changes', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         resizable: false

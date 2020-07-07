@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 import syn from 'syn'
 
@@ -6,7 +6,7 @@ let wrapper
 
 describe('`drag-handle` prop', function () {
   it('should activate the component from the selector identified by the `drag-handle` prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         dragHandle: '.drag-handle'
@@ -23,7 +23,7 @@ describe('`drag-handle` prop', function () {
   })
 
   it('should not activate the component from outside the selector identified by the `drag-handle` prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         dragHandle: '.drag-handle'
@@ -40,7 +40,7 @@ describe('`drag-handle` prop', function () {
   })
 
   it('should drag the component only from the selector identified by the `drag-handle` prop', function (done) {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         dragHandle: '.drag-handle',
@@ -80,7 +80,7 @@ describe('`drag-handle` prop', function () {
 
 describe('`drag-cancel` prop', function () {
   it('should not activate the component from the selector identified by the `drag-cancel` prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         dragCancel: '.drag-cancel'
@@ -97,7 +97,7 @@ describe('`drag-cancel` prop', function () {
   })
 
   it('should activate the component from outside the selector identified by the `drag-cancel` prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       attachToDocument: true,
       propsData: {
         dragCancel: '.drag-cancel'

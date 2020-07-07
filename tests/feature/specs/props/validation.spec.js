@@ -1,4 +1,4 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 
 let wrapper
@@ -9,7 +9,7 @@ function getProp (prop) {
 
 describe('props validation', function () {
   beforeEach(() => {
-    wrapper = mount(VueDraggableResizable)
+    wrapper = mount(vue-draggable-div)
   })
 
   it('should validate `className` prop', function () {

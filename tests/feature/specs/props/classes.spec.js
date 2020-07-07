@@ -1,11 +1,11 @@
-import VueDraggableResizable from '@/components/vue-draggable-div'
+import vue-draggable-div from '@/components/vue-draggable-div'
 import { mount } from '@vue/test-utils'
 
 let wrapper
 
 describe('classes props', function () {
   it('should provide the default class name as `class-name` prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         className: 'my-class'
       }
@@ -16,7 +16,7 @@ describe('classes props', function () {
   })
 
   it('should provide the active class name as `class-name-active` prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         classNameActive: 'my-active-class',
         active: true
@@ -28,7 +28,7 @@ describe('classes props', function () {
   })
 
   it('should provide the dragging class name as `class-name-dragging` prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         classNameDragging: 'my-dragging-class'
       }
@@ -38,7 +38,7 @@ describe('classes props', function () {
   })
 
   it('should provide the resizing class name as `class-name-resizing` prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         classNameResizing: 'my-resizing-class'
       }
@@ -48,7 +48,7 @@ describe('classes props', function () {
   })
 
   it('should provide the handle class name as `class-name-handle` prop', function () {
-    wrapper = mount(VueDraggableResizable, {
+    wrapper = mount(vue-draggable-div, {
       propsData: {
         classNameHandle: 'my-handle-class'
       }
